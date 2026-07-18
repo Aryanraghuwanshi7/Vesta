@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vesta — Premium Smart Kitchen & Home Assistant</title>
+  <meta name="description" content="Organize the heart of your home with Vesta. A calm, organic, and intelligent smart assistant that helps families manage kitchens, meals, groceries, and healthy living effortlessly.">
+  
+  <!-- Premium Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS not requested; using core CSS for vanilla mastery -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Botanical Decorative Background Elements -->
+  <div class="organic-decor element-1">
+    <img src="assets/botanical_leaf_one.png" alt="Eucalyptus leaf sprig" />
+  </div>
+  <div class="organic-decor element-2">
+    <img src="assets/botanical_leaf_two.png" alt="Rosemary sprig" />
+  </div>
+  <div class="organic-decor-blob-1"></div>
+  <div class="organic-decor-blob-2"></div>
+
+  <!-- FLOATING NAVBAR -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <div class="nav-logo">
+        <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor" style="display:none;"/>
+          <path d="M12 3C7.5 3 4 6.5 4 11C4 13.5 5 15.5 6.5 17C8 18.5 10 21 12 21C14 21 16 18.5 17.5 17C19 15.5 20 13.5 20 11C20 6.5 16.5 3 12 3ZM12 16.5C10.6 16.5 9.5 15.4 9.5 14C9.5 12.6 10.6 11.5 12 11.5C13.4 11.5 14.5 12.6 14.5 14C14.5 15.4 13.4 16.5 12 16.5Z" fill="currentColor"/>
+          <path d="M12 5.5C10 5.5 8.5 6.5 8 8C9.5 7.5 11 8.5 12 9.5C13 8.5 14.5 7.5 16 8C15.5 6.5 14 5.5 12 5.5Z" fill="currentColor" opacity="0.6"/>
+        </svg>
+        <span class="logo-text">vesta</span>
+      </div>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inventory" class="nav-link" data-module="inventory">Inventory</a></li>
+        <li><a href="#shopping" class="nav-link" data-module="shopping">Shopping</a></li>
+        <li><a href="#recipes" class="nav-link" data-module="recipes">Recipes</a></li>
+        <li><a href="#planner" class="nav-link" data-module="planner">Planner</a></li>
+        <li><a href="#tracker" class="nav-link" data-module="tracker">Health Tracker</a></li>
+      </ul>
+      
+      <div class="nav-actions">
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <main class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-tag">Intelligent Kitchen Assistant</span>
+        <h1 class="hero-title">Organize the<br><span class="highlight">Heart of Your Home</span></h1>
+        <p class="hero-subtitle">
+          Welcome to a calmer kitchen. Vesta is a gentle, intelligent home assistant crafted to help busy families organize inventory, streamline shopping, discover recipes, plan weekly meals, and nurture mindful wellness effortlessly.
+        </p>
+        <div class="hero-ctas">
+          <a href="#explore-modules" class="btn btn-primary scroll-to">Explore Features</a>
+        </div>
+      </div>
+      
+      <!-- Integrated Showcase Frame -->
+      <div class="hero-visual-frame">
+        <div class="visual-glow"></div>
+        <div class="visual-image-wrapper">
+          <img src="assets/hero_kitchen.png" alt="Warm, modern, sunlit smart kitchen showing wooden counters, fresh potted herbs, and an embedded digital tabletop recipe display" class="hero-main-img" />
+          
+          <!-- Mini Floating Smart Badge -->
+          <div class="smart-badge badge-pantry animate-float-slow">
+            <div class="badge-icon">🌿</div>
+            <div class="badge-text">
+              <span class="badge-title">Fresh Herbs</span>
+              <span class="badge-status">In Pantry</span>
+            </div>
+          </div>
+          
+          <div class="smart-badge badge-planner animate-float-medium">
+            <div class="badge-icon">🗓️</div>
+            <div class="badge-text">
+              <span class="badge-title">Dinner Planned</span>
+              <span class="badge-status">Roasted Veggies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- NAVIGATION HUB SECTION -->
+  <section class="navigation-hub" id="explore-modules">
+    <div class="section-header">
+      <h2 class="section-title">A Gentle Touch for Every Family Need</h2>
+      <p class="section-subtitle">
+        Every modern home runs on a unique rhythm. Discover how Vesta gracefully orchestrates each aspect of your kitchen ecosystem to bring absolute peace of mind.
+      </p>
+    </div>
+    
+    <div class="cards-grid">
+      <!-- Card 1: Inventory -->
+      <div class="nav-card card-inventory" data-module="inventory">
+        <div class="card-bg-gradient"></div>
+        <div class="card-content">
+          <div class="card-icon-wrapper">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <h3 class="card-title">Inventory</h3>
+          <p class="card-description">Keep track of fresh herbs, staple pantry items, and expiry timelines to avoid waste effortlessly.</p>
+          <span class="card-action">
+            Open Pantry
+            <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+      
+      <!-- Card 2: Shopping -->
+      <div class="nav-card card-shopping" data-module="shopping">
+        <div class="card-bg-gradient"></div>
+        <div class="card-content">
+          <div class="card-icon-wrapper">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+          </div>
+          <h3 class="card-title">Shopping</h3>
+          <p class="card-description">Create smart shared shopping lists that update automatically as you consume your pantry essentials.</p>
+          <span class="card-action">
+            View Lists
+            <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+      
+      <!-- Card 3: Recipes -->
+      <div class="nav-card card-recipes" data-module="recipes">
+        <div class="card-bg-gradient"></div>
+        <div class="card-content">
+          <div class="card-icon-wrapper">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2v6a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2"></path>
+              <path d="M6 4h12"></path>
+              <path d="M12 12v10"></path>
+              <path d="M8 22h8"></path>
+              <path d="M3 8h18"></path>
+            </svg>
+          </div>
+          <h3 class="card-title">Recipes</h3>
+          <p class="card-description">Explore nourishing recipes based precisely on what you have in your cupboards right now.</p>
+          <span class="card-action">
+            Discover Meals
+            <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+      
+      <!-- Card 4: Planner -->
+      <div class="nav-card card-planner" data-module="planner">
+        <div class="card-bg-gradient"></div>
+        <div class="card-content">
+          <div class="card-icon-wrapper">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="card-title">Planner</h3>
+          <p class="card-description">Plan your family menu for the week with a clean drag-and-drop shared digital calendar.</p>
+          <span class="card-action">
+            Open Calendar
+            <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+      
+      <!-- Card 5: Health Tracker -->
+      <div class="nav-card card-tracker" data-module="tracker">
+        <div class="card-bg-gradient"></div>
+        <div class="card-content">
+          <div class="card-icon-wrapper">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h3 class="card-title">Health Tracker</h3>
+          <p class="card-description">Monitor family wellness indices, daily hydration, vitamin balance, and organic nourishment ratios.</p>
+          <span class="card-action">
+            Check Wellness
+            <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DRAWER CONTAINER (The Premium Showcase) -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  
+  <div class="showcase-drawer" id="showcase-drawer">
+    <div class="drawer-handle"></div>
+    <button class="drawer-close" id="drawer-close" aria-label="Close panel">×</button>
+    
+    <div class="drawer-body">
+      <!-- Drawer Content for INVENTORY -->
+      <div class="module-showcase hidden" id-module="inventory">
+        <div class="module-header">
+          <div class="header-main-row">
+            <div>
+              <span class="module-badge">Organize Smart</span>
+              <h3 class="module-title">Your Calm Virtual Pantry</h3>
+              <p class="module-lead">Track fresh food levels, herbs, and staple storage items instantly. Minimize waste and cook creatively.</p>
+            </div>
+            <!-- Global Pantry Actions -->
+            <div class="pantry-global-actions">
+              <button class="btn btn-secondary btn-sm" id="btn-export-pdf" title="Export Inventory PDF">
+                <span>📄 Export PDF</span>
+              </button>
+              <button class="btn btn-danger-outline btn-sm" id="btn-clear-all" title="Clear Full Inventory">
+                <span>🗑️ Clear All</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pantry-workspace">
+          <!-- SEARCH & AUTOCOMPLETE BLOCK -->
+          <div class="pantry-search-box">
+            <div class="search-input-wrapper">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="pantry-search-input" placeholder="Search curated database or add custom item..." autocomplete="off">
+              <button class="btn btn-accent btn-sm" id="btn-custom-add">+ Add Custom</button>
+            </div>
+            
+            <!-- Autocomplete Suggestion Dropdown (Transparent Glassmorphism) -->
+            <div class="search-suggestions-dropdown hidden" id="search-suggestions">
+              <!-- Dynamically populated suggestions -->
+            </div>
+          </div>
+          
+          <!-- FILTER & LAYOUT BAR -->
+          <div class="pantry-controls-bar">
+            <!-- Category Tabs Slider -->
+            <div class="category-tabs-wrapper">
+              <button class="tab-btn active" data-cat="all">All</button>
+              <button class="tab-btn" data-cat="Produce">🥑 Produce</button>
+              <button class="tab-btn" data-cat="Dairy">🥛 Dairy</button>
+              <button class="tab-btn" data-cat="Bakery">🍞 Bakery</button>
+              <button class="tab-btn" data-cat="Pantry">🌾 Pantry</button>
+              <button class="tab-btn" data-cat="Beverages">🍵 Drinks</button>
+              <button class="tab-btn" data-cat="low_stock">📉 Low Stock</button>
+              <button class="tab-btn" data-cat="favorites">⭐ Favorites</button>
+              <button class="tab-btn" data-cat="expiring_soon">⏱️ Expiring</button>
+              <button class="tab-btn" data-cat="expired">🚫 Expired</button>
+              <button class="tab-btn" data-cat="recently_added">🆕 Recent</button>
+              <button class="tab-btn" data-cat="alphabetical">🔤 A–Z</button>
+            </div>
+            
+            <!-- Sort & View Controls -->
+            <div class="sort-view-controls">
+              <select id="pantry-sort-select" class="glass-select">
+                <option value="recently_added">Recently Added</option>
+                <option value="expiring_soon">Expiring Soon</option>
+                <option value="low_stock">Low Stock</option>
+                <option value="alphabetical">Alphabetical (A-Z)</option>
+              </select>
+              
+
+            </div>
+          </div>
+
+          <!-- Dynamic Expiry Alerts & Waste Prevention Area -->
+          <div class="pantry-alerts-section hidden" id="pantry-alerts-panel">
+            <div class="waste-alert-card">
+              <div class="alert-icon">⚠️</div>
+              <div class="alert-details">
+                <h4>Waste Prevention Warning</h4>
+                <p id="waste-alert-message">Some items are nearing expiry or have expired. Check them out first to prevent food waste.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Active Pantry Cards Container -->
+          <div class="pantry-grid" id="pantry-items-container"></div>
+
+          <section class="pantry-expired-section hidden" id="pantry-expired-section">
+            <h4 class="expired-section-title">Expired Items</h4>
+            <p class="expired-section-lead">These items have passed their expiry date. Remove or dispose of them safely.</p>
+            <div class="pantry-grid pantry-expired-grid" id="pantry-expired-container"></div>
+          </section>
+        </div>
+      </div>
+      
+      <!-- Drawer Content for SHOPPING -->
+      <div class="module-showcase hidden" id-module="shopping">
+        <div class="module-header">
+          <span class="module-badge">Mindful Buying</span>
+          <h3 class="module-title">Collaborative Grocery List</h3>
+          <p class="module-lead">Items integrate automatically from your pantry alerts, ensuring you buy only what your family loves and needs.</p>
+        </div>
+        
+        <div class="shopping-showcase">
+          <div class="shopping-list-card">
+            <div class="list-header" style="margin-bottom: 12px;">
+              <span class="list-title">Weekly Table List</span>
+              <span class="list-count" id="checked-count">0 of 0 checked</span>
+            </div>
+            
+            <div class="shop-view-toggles" style="margin: 0 0 15px 0; display: flex; gap: 8px; border-bottom: 1px solid var(--color-cream-dark); padding-bottom: 10px;">
+              <button class="btn btn-sm btn-secondary active-tab" id="shop-view-flat-btn" style="background: var(--color-forest); color: white;">Flat List</button>
+              <button class="btn btn-sm btn-secondary" id="shop-view-grouped-btn">Grouped by Category</button>
+            </div>
+            
+            <ul class="checklist" id="shopping-checklist">
+              <!-- Rendered dynamically -->
+            </ul>
+            
+            <div class="list-input-wrapper" style="position: relative; margin-top: 15px;">
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <input type="text" placeholder="Add organic grocery item..." id="add-grocery-input" autocomplete="off" style="flex: 1; padding: 10px 14px; border-radius: 12px; border: 1px solid var(--color-cream-dark); font-size: 0.85rem;">
+                <input type="number" id="add-grocery-qty" value="1" min="0.1" step="any" style="width: 60px; padding: 10px; border-radius: 12px; border: 1px solid var(--color-cream-dark); font-size: 0.85rem; text-align: center;">
+                <select id="add-grocery-unit" style="padding: 10px; border-radius: 12px; border: 1px solid var(--color-cream-dark); font-size: 0.85rem; background: white; cursor: pointer;">
+                  <option value="pcs">pcs</option>
+                  <option value="pack">pack</option>
+                  <option value="g">g</option>
+                  <option value="kg">kg</option>
+                  <option value="ml">ml</option>
+                  <option value="L">L</option>
+                  <option value="oz">oz</option>
+                  <option value="lb">lb</option>
+                </select>
+                <button class="btn btn-primary btn-sm" id="add-grocery-btn" style="border-radius: 8px; padding: 10px 16px;">Add</button>
+              </div>
+              <div class="autocomplete-suggestions hidden" id="shop-autocomplete-suggestions" style="position: absolute; bottom: 45px; left: 0; right: 0; background: rgba(255, 255, 255, 0.98); border: 1px solid var(--color-cream-dark); border-radius: 12px; z-index: 100; max-height: 180px; overflow-y: auto; box-shadow: var(--shadow-card); backdrop-filter: blur(10px);"></div>
+            </div>
+            
+            <div class="shop-actions-grid">
+              <button class="btn btn-secondary btn-sm shop-action-btn" id="btn-shop-autorestock">🌿 Auto-Restock Low Stock</button>
+              <button class="btn btn-accent btn-sm shop-action-btn" id="btn-shop-checkout">🛒 Checkout to Pantry</button>
+              <button class="btn btn-secondary btn-sm shop-action-btn" id="btn-shop-export-pdf">📄 Export PDF</button>
+              <button class="btn btn-secondary btn-sm shop-action-btn" id="btn-shop-clear-checked">🗑️ Clear Checked</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Drawer Content for RECIPES -->
+      <div class="module-showcase hidden" id-module="recipes">
+        <div class="module-header">
+          <span class="module-badge">Culinary Alchemy</span>
+          <h3 class="module-title">Tailored Culinary Discovery</h3>
+          <p class="module-lead">Intelligent, wholesome recipes curated around ingredients that are currently fresh in your pantry.</p>
+        </div>
+        
+        <div class="recipe-workspace">
+          <div class="recipe-match-banner hidden" id="recipe-match-banner">
+            <span class="banner-icon">🌿</span>
+            <span class="banner-text">Pantry-aware recipes loaded.</span>
+            <button type="button" class="btn btn-secondary btn-sm" id="recipe-clear-context">Clear</button>
+          </div>
+
+          <div class="recipe-search-box">
+            <div class="search-input-wrapper">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="recipe-search-input" placeholder="Search recipes by name, ingredient, or mood…" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="recipe-controls-bar">
+            <div class="recipe-tabs-wrapper">
+              <button class="recipe-tab-btn active" data-filter="all">All</button>
+              <button class="recipe-tab-btn" data-filter="can_cook">✅ Can Cook Now</button>
+              <button class="recipe-tab-btn" data-filter="use_expiring">⏱️ Use Expiring</button>
+              <button class="recipe-tab-btn" data-filter="breakfast">🌅 Breakfast</button>
+              <button class="recipe-tab-btn" data-filter="dinner">🌙 Dinner</button>
+              <button class="recipe-tab-btn" data-filter="quick">⚡ Quick</button>
+              <button class="recipe-tab-btn" data-filter="favorites">⭐ Saved</button>
+            </div>
+            <select id="recipe-sort-select" class="glass-select">
+              <option value="match_score">Best Pantry Match</option>
+              <option value="time">Fastest</option>
+              <option value="alphabetical">A–Z</option>
+              <option value="recent">Recently Viewed</option>
+            </select>
+          </div>
+
+          <div class="recipe-showcase">
+            <div class="recipe-cards-container" id="recipe-cards-container"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Drawer Content for PLANNER -->
+      <div class="module-showcase hidden" id-module="planner">
+        <div class="module-header">
+          <span class="module-badge">Family Menu</span>
+          <h3 class="module-title">Weekly Menu Planner</h3>
+          <p class="module-lead">Organize your breakfast, lunch, and dinner dynamically to bring balanced rhythm back to the family dinner table.</p>
+        </div>
+        
+        <div class="planner-showcase">
+          <div class="calendar-wrapper" style="width: 100%;">
+            <div class="calendar-days" id="planner-calendar-days" style="display: flex; flex-direction: column; gap: 12px;">
+              <!-- Mon-Sun rendered dynamically in JS -->
+            </div>
+          </div>
+          
+          <div class="planner-suggestions">
+            <h4>Recommended Dinner</h4>
+            <p id="planner-recom-desc">Analyzing your pantry items to find the best wholesome recommendation...</p>
+            <button class="btn btn-accent btn-sm" id="schedule-recom-btn">Schedule Dinner</button>
+          </div>
+        </div>
+        
+        <!-- Recipe Picker Popover (Absolute Floating UI) -->
+        <div class="glass-context-menu hidden" id="planner-recipe-picker" style="position: fixed; z-index: 9999; width: 280px; background: rgba(255, 255, 255, 0.98); border: 1px solid var(--color-cream-dark); border-radius: 16px; box-shadow: var(--shadow-card); padding: 12px; backdrop-filter: blur(10px);">
+          <div style="font-size: 0.8rem; font-weight: bold; margin-bottom: 8px; color: var(--color-forest); display: flex; justify-content: space-between; align-items: center;">
+            <span>Select Recipe</span>
+            <button id="planner-recipe-picker-close" style="background: none; border: none; font-size: 1.1rem; color: #aaa; cursor: pointer; line-height: 1;">&times;</button>
+          </div>
+          <input type="text" id="planner-recipe-search" placeholder="Search recipe..." style="width: 100%; font-size: 0.75rem; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--color-cream-dark); background: rgba(255,255,255,0.7); margin-bottom: 8px;" autocomplete="off">
+          <div id="planner-recipe-list" style="max-height: 180px; overflow-y: auto; display: flex; flex-direction: column; gap: 4px;">
+            <!-- Populate recipes dynamically -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Drawer Content for TRACKER -->
+      <div class="module-showcase hidden" id-module="tracker">
+        <div class="module-header">
+          <span class="module-badge">Nourish & Balance</span>
+          <h3 class="module-title">Family Wholesomeness Tracker</h3>
+          <p class="module-lead">Gracefully map out hydration goals, nutritional green intake, and sleep vitals to guide mindful healthy living.</p>
+        </div>
+        
+        <div class="tracker-showcase" style="display: flex; flex-direction: column; gap: 24px; width: 100%;">
+          <!-- Top Row: Calories/Macros and Weight/Charts -->
+          <div class="tracker-stats-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+            <!-- Calories & Macros -->
+            <div class="stat-card calories-card">
+              <div class="stat-header">
+                <h4>Daily Nutrition</h4>
+                <span class="stat-icon">🍎</span>
+              </div>
+              <div class="calories-overview" style="text-align: center; margin: 15px 0;">
+                 <h2 id="calories-consumed" style="font-size: 2.5rem; color: var(--color-forest); margin: 0;">0</h2>
+                 <p style="color: #666; font-size: 0.9rem; margin: 0;">kcal consumed / <span id="calories-goal">2000</span> goal</p>
+                 <div class="card-qty-bar" style="margin-top: 10px; height: 8px; background: rgba(49,89,63,0.1); border-radius: 4px; overflow: hidden;">
+                   <div id="calories-bar-fill" style="width: 0%; height: 100%; background: var(--color-forest); transition: width 0.5s ease;"></div>
+                 </div>
+              </div>
+              <div class="macros-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+                 <div class="macro-item">
+                   <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;"><span>Protein</span> <span id="macro-protein">0g</span></div>
+                   <div style="height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px;"><div id="macro-bar-protein" style="width: 0%; height: 100%; background: #e76f51; border-radius: 3px; transition: width 0.5s ease;"></div></div>
+                 </div>
+                 <div class="macro-item">
+                   <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;"><span>Carbs</span> <span id="macro-carbs">0g</span></div>
+                   <div style="height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px;"><div id="macro-bar-carbs" style="width: 0%; height: 100%; background: #f4a261; border-radius: 3px; transition: width 0.5s ease;"></div></div>
+                 </div>
+                 <div class="macro-item">
+                   <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;"><span>Fat</span> <span id="macro-fat">0g</span></div>
+                   <div style="height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px;"><div id="macro-bar-fat" style="width: 0%; height: 100%; background: #e9c46a; border-radius: 3px; transition: width 0.5s ease;"></div></div>
+                 </div>
+                 <div class="macro-item">
+                   <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;"><span>Fiber</span> <span id="macro-fiber">0g</span></div>
+                   <div style="height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px;"><div id="macro-bar-fiber" style="width: 0%; height: 100%; background: #2a9d8f; border-radius: 3px; transition: width 0.5s ease;"></div></div>
+                 </div>
+              </div>
+            </div>
+
+            <!-- Weight & Charts -->
+            <div class="stat-card weight-card" style="display: flex; flex-direction: column;">
+              <div class="stat-header">
+                <h4>Weight Progress</h4>
+                <span class="stat-icon">⚖️</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 15px; margin-top: 10px;">
+                <div style="text-align: center;">
+                  <span style="font-size: 0.8rem; color: #666;">Current</span>
+                  <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-forest);" id="weight-current">-- kg</div>
+                </div>
+                <div style="text-align: center;">
+                  <span style="font-size: 0.8rem; color: #666;">Target</span>
+                  <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-sage);" id="weight-target">-- kg</div>
+                </div>
+                <button class="btn btn-secondary btn-sm" id="btn-update-weight" style="align-self: center;">Update</button>
+              </div>
+              <div style="flex: 1; border: 1px solid rgba(0,0,0,0.05); border-radius: 12px; padding: 10px; background: white;">
+                <!-- SVG Chart Container for Weight / Calories -->
+                <svg id="health-chart-svg" width="100%" height="120" style="display: block;"></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Row: Hydration and Insights -->
+          <div class="tracker-stats-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+            <!-- Expanded Hydration -->
+            <div class="stat-card hydration-card" style="display: flex; flex-direction: column;">
+              <div class="stat-header">
+                <h4>Daily Hydration</h4>
+                <span class="stat-icon">💧</span>
+              </div>
+              <div style="display: flex; gap: 20px; align-items: center; margin-top: 10px;">
+                <div class="stat-progress-circle" style="flex-shrink: 0; width: 80px; height: 80px; position: relative;">
+                  <svg viewBox="0 0 36 36" class="circular-chart" style="width:100%; height:100%;">
+                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" style="fill:none; stroke:#e6e6e6; stroke-width:3;"/>
+                    <path class="circle" id="water-progress-circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" style="fill:none; stroke:#3498db; stroke-width:3; stroke-linecap:round; transition: stroke-dasharray 0.5s ease;"/>
+                  </svg>
+                  <div class="circle-inner-val" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center;">
+                    <span id="water-val" style="font-size: 1.2rem; font-weight: bold;">0.0</span><span class="unit" style="font-size: 0.8rem;">L</span>
+                  </div>
+                </div>
+                <div style="flex: 1;">
+                   <p style="font-size: 0.85rem; color: #666; margin-bottom: 10px;">Goal: <span id="water-goal-display">3.0</span>L <button id="btn-edit-water-goal" style="background:none;border:none;color:var(--color-sage);cursor:pointer;font-size:0.8rem;text-decoration:underline;">Edit</button></p>
+                   <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">🔥 Streak: <span id="water-streak" style="font-weight:bold; color:var(--color-forest);">0 days</span></p>
+                   <button class="btn btn-secondary btn-sm" id="drink-water-btn" style="width: 100%;">Log 250ml Glass</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Health Insights -->
+            <div class="stat-card insights-card" style="display: flex; flex-direction: column;">
+              <div class="stat-header">
+                <h4>AI Health Insights</h4>
+                <span class="stat-icon">✨</span>
+              </div>
+              <div id="health-insights-content" style="background: rgba(101,140,62,0.05); padding: 15px; border-radius: 12px; border: 1px solid rgba(101,140,62,0.1); margin-top: 10px; font-size: 0.9rem; line-height: 1.5; color: var(--color-forest-dark); flex: 1; overflow-y: auto;">
+                Log your meals and weight to receive customized nutritional advice and trend analysis.
+              </div>
+            </div>
+          </div>
+          
+          <!-- Logging & History Section -->
+          <div class="stat-card consume-log-card" style="width: 100%;">
+            <div class="stat-header" style="margin-bottom: 15px;">
+              <h4>Meal & Ingredient Log</h4>
+              <span class="stat-icon">🍽️</span>
+            </div>
+            
+            <div class="consume-logger-wrapper" style="display: flex; gap: 12px; margin-bottom: 15px; position: relative;">
+              <div style="flex: 1; position: relative;">
+                <input type="text" id="tracker-food-input" placeholder="Search product or recipe to log eaten..." style="width: 100%; padding: 10px 14px; border-radius: 12px; border: 1px solid var(--color-cream-dark); font-size: 0.85rem;" autocomplete="off">
+                <div class="autocomplete-suggestions hidden" id="tracker-autocomplete-suggestions" style="position: absolute; top: 44px; left: 0; right: 0; background: white; border: 1px solid var(--color-cream-dark); border-radius: 12px; z-index: 100; max-height: 180px; overflow-y: auto; box-shadow: var(--shadow-card);"></div>
+              </div>
+              <input type="number" id="tracker-food-qty" placeholder="Qty" value="100" style="width: 70px; padding: 10px; border-radius: 12px; border: 1px solid var(--color-cream-dark); font-size: 0.85rem; text-align: center;">
+              <select id="tracker-food-unit" class="glass-select" style="width: 80px; padding: 10px; border-radius: 12px; border: 1px solid var(--color-cream-dark); font-size: 0.85rem; background: white;">
+                <option value="g">g</option>
+                <option value="ml">ml</option>
+                <option value="pieces">pcs</option>
+                <option value="serving">srv</option>
+              </select>
+              <button class="btn btn-primary" id="btn-tracker-log-food" style="padding: 10px 20px;">Log</button>
+            </div>
+            
+            <div class="logged-items-section">
+              <h5 style="font-size: 0.9rem; color: var(--color-forest); margin-bottom: 10px;">Today's Consumed Log</h5>
+              <ul id="tracker-logged-list" style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; max-height: 180px; overflow-y: auto;">
+                <!-- Logged entries rendered dynamically -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MINIMAL PREMIUM FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg class="logo-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3C7.5 3 4 6.5 4 11C4 13.5 5 15.5 6.5 17C8 18.5 10 21 12 21C14 21 16 18.5 17.5 17C19 15.5 20 13.5 20 11C20 6.5 16.5 3 12 3Z" fill="currentColor"/>
+          </svg>
+          <span class="logo-text">vesta</span>
+        </div>
+        <p class="footer-tagline">Organize the Heart of Your Home.</p>
+      </div>
+      <div class="footer-links-group">
+        <div class="footer-column">
+          <h5>Companion</h5>
+          <ul>
+            <li><a href="#inventory" class="nav-link" data-module="inventory">Pantry Tracker</a></li>
+            <li><a href="#recipes" class="nav-link" data-module="recipes">Ingredient Search</a></li>
+            <li><a href="#planner" class="nav-link" data-module="planner">Menu Architect</a></li>
+            <li><a href="#tracker" class="nav-link" data-module="tracker">Health Tracker</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vesta Technologies. Designed in harmony with modern homes.</p>
+    </div>
+  </footer>
+
+  <!-- Custom Context Menu for Inventory Items -->
+  <div class="pantry-context-menu hidden" id="pantry-context-menu">
+    <ul>
+      <li id="menu-action-edit">✏️ Edit Details</li>
+      <li id="menu-action-consume">🍽️ Consume Portion</li>
+      <li id="menu-action-shopping">🛒 Add to Shopping List</li>
+      <li id="menu-action-recipe">🍳 Recipe Suggestions</li>
+      <li id="menu-action-view">👁️ View Details</li>
+      <li id="menu-action-favorite">⭐ Favorite</li>
+      <li id="menu-action-lowstock">📉 Mark Low Stock</li>
+      <li class="divider"></li>
+      <li id="menu-action-delete" class="text-danger">🗑️ Remove Item</li>
+    </ul>
+  </div>
+
+  <!-- Modals and Overlay System -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+  
+  <!-- Add/Edit Item Modal -->
+  <div class="glass-modal" id="modal-edit-item">
+    <div class="modal-header">
+      <h3 id="modal-title">Add Pantry Item</h3>
+      <button class="modal-close" id="modal-edit-close" aria-label="Close modal">&times;</button>
+    </div>
+    <form class="modal-form" id="inventory-form">
+      <input type="hidden" id="edit-item-id">
+      <input type="hidden" id="edit-product-id">
+      
+      <div class="form-group">
+        <label for="edit-item-name">Product Name</label>
+        <input type="text" id="edit-item-name" required placeholder="e.g. Organic Strawberries">
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="edit-item-category">Category</label>
+          <select id="edit-item-category" required>
+            <option value="Produce">Produce</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Bakery">Bakery</option>
+            <option value="Pantry">Pantry</option>
+            <option value="Beverages">Beverages</option>
+            <option value="Proteins">Proteins</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="edit-item-emoji">Icon Emoji</label>
+          <input type="text" id="edit-item-emoji" value="📦" maxlength="2" placeholder="e.g. 🍓">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="edit-item-brand">Brand / Source</label>
+        <input type="text" id="edit-item-brand" placeholder="e.g. Local Farm or Organic">
+      </div>
+
+      <div class="form-group">
+        <label for="edit-item-unit">Unit</label>
+        <select id="edit-item-unit" required>
+          <option value="pieces">pieces</option>
+          <option value="g">g</option>
+          <option value="ml">ml</option>
+          <option value="packs">packs</option>
+          <option value="kg">kg</option>
+          <option value="L">L</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Expiry Batches</label>
+        <div id="batches-editor" class="batches-editor"></div>
+        <button type="button" class="btn btn-secondary btn-sm" id="btn-add-batch">+ Add Batch</button>
+        <span class="field-hint">Track multiple expiry batches for the same product.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="edit-item-notes">Notes</label>
+        <textarea id="edit-item-notes" rows="2" placeholder="Storage tips, usage notes…"></textarea>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <label class="checkbox-inline">
+          <input type="checkbox" id="edit-item-lowstock"> Mark as low stock manually
+        </label>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="btn-modal-cancel">Cancel</button>
+        <button type="submit" class="btn btn-primary" id="btn-modal-save">Save Item</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Item Details Modal -->
+  <div class="glass-modal" id="modal-view-item">
+    <div class="modal-header">
+      <h3 id="view-title">Item Storage Details</h3>
+      <button class="modal-close" id="modal-view-close" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="view-item-body">
+      <div class="view-item-hero">
+        <span class="view-emoji" id="view-item-emoji">🍎</span>
+        <div class="view-hero-text">
+          <h4 id="view-item-name">Product Name</h4>
+          <span class="status-pill" id="view-item-category">Category</span>
+        </div>
+      </div>
+      <div class="view-item-details-grid">
+        <div class="detail-cell">
+          <span class="label">Total Stock</span>
+          <span class="value" id="view-item-stock">250g</span>
+        </div>
+        <div class="detail-cell">
+          <span class="label">Brand</span>
+          <span class="value" id="view-item-brand">Fresh</span>
+        </div>
+        <div class="detail-cell">
+          <span class="label">Wellness Energy</span>
+          <span class="value" id="view-item-calories">~40 kcal / 100g</span>
+        </div>
+        <div class="detail-cell">
+          <span class="label">Status</span>
+          <span class="value" id="view-item-status">Fresh</span>
+        </div>
+      </div>
+      <div class="view-item-batches-section">
+        <h5>Active Storage Batches</h5>
+        <ul class="batches-list" id="view-item-batches">
+          <!-- Populated dynamically in JS -->
+        </ul>
+      </div>
+      <div class="view-item-description">
+        <h5>About this Item</h5>
+        <p id="view-item-description-text">Description...</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="btn-view-close-ok">Dismiss Details</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recipe Detail Modal -->
+  <div class="glass-modal recipe-detail-modal" id="modal-recipe-detail">
+    <div class="recipe-detail-header">
+      <div class="recipe-detail-header-top">
+        <span class="recipe-detail-emoji" id="recipe-detail-emoji">🍳</span>
+        <div class="recipe-detail-header-info">
+          <h3 id="recipe-detail-title">Recipe</h3>
+          <div class="recipe-detail-meta">
+            <span id="recipe-detail-time">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              20 min
+            </span>
+            <span id="recipe-detail-servings">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              2 servings
+            </span>
+            <span id="recipe-detail-difficulty">easy</span>
+            <span id="recipe-detail-calories">—</span>
+            <span class="recipe-match-pill" id="recipe-detail-match">0% match</span>
+          </div>
+        </div>
+        <button class="modal-close" id="modal-recipe-close" aria-label="Close">&times;</button>
+      </div>
+      <p class="recipe-detail-description" id="recipe-detail-description"></p>
+    </div>
+    <div class="recipe-detail-body">
+      <h5>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10H3"/><path d="M21 6H3"/><path d="M21 14H3"/><path d="M21 18H3"/></svg>
+        Ingredients
+      </h5>
+      <ul class="recipe-detail-ingredients" id="recipe-detail-ingredients"></ul>
+      <h5>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Cooking Steps
+      </h5>
+      <ol class="recipe-detail-steps" id="recipe-detail-steps"></ol>
+    </div>
+    <div class="recipe-detail-footer">
+      <button type="button" class="btn btn-secondary" id="btn-recipe-toggle-fav">☆ Save Recipe</button>
+      <button type="button" class="btn btn-accent" id="btn-recipe-add-shopping">Add Missing to Shopping</button>
+      <button type="button" class="btn btn-primary" id="btn-recipe-consume" style="background: var(--color-sage); color: white; border: 1px solid var(--color-sage);">🍽️ Log &amp; Consume</button>
+      <button type="button" class="btn btn-outline" id="btn-recipe-close">Close</button>
+    </div>
+  </div>
+
+  <div id="pdf-export-root" class="pdf-export-root" aria-hidden="true"></div>
+
+  <!-- Link scripts -->
+  <script src="js/utils.js"></script>
+  <script src="data/products.js"></script>
+  <script src="data/recipes.js"></script>
+  <script src="data/nutrition.js"></script>
+  <script src="data/defaults.js"></script>
+  <script src="lib/html2pdf.bundle.min.js"></script>
+  <script src="js/inventory.js"></script>
+  <script src="js/recipes.js"></script>
+  <script src="js/shopping.js"></script>
+  <script src="js/planner.js"></script>
+  <script src="js/tracker.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
